@@ -40,6 +40,10 @@ gitbook的使用
 
 ## 文档操作
 
+gitbook-cli安装
+
+npm i -g gitbook-cli
+
 生成目录
 
 gitbook init

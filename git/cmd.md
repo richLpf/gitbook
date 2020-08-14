@@ -1,8 +1,6 @@
 # 常用命令
 
-git add 
-
-
+git add (完成)
 
 git commit
 
