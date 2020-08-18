@@ -24,6 +24,26 @@
 首先需要在使用的本机上生成ssh-key，然后项目public-key加入到gitlab或githuab等远程仓库，这样我们就可以直接拉取仓库的内容。（当然，如果项目有权限的话还要添加访问，修改等权限，一般在管理员的setting选项中设置）
 
 
+## 生成ssh
+1、先执行以下语句来判断是否已经存在本地公钥： 
+cat ~/.ssh/id_rsa.pub 
+2、如果你看到一长串以 ssh-rsa或 ssh-dsa开头的字符串, 你可以跳过 ssh-keygen的步骤。否则 
+你可以按如下命令来生成ssh key： 
+ssh-keygen -t rsa -C “835570372@qq.com” 
+3、这个指令会要求你提供一个位置和文件名去存放键值对和密码，你可以点击Enter键去使用默认值。 
+用以下命令获取你生成的公钥： 
+cat ~/.ssh/id_rsa.pub
 
-然后就可以
+## git操作
+> 查看
+
+git config user.name
+
+git config user.email
+
+> 设置
+
+git config --global user.name "pengfei.lv"
+
+git config --global user.email "pengfei.lv@ucloud.cn"
 
