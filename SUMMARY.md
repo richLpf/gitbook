@@ -45,4 +45,6 @@
     * [gitlab使用](gitlab/快速使用.md)
     * [gitlab部署](gitlab/部署.md)
     * [gitlabCICD](gitlab/CICD.md)
+* [gitbook](gitbook/README.md)
+    * [插件](gitbook/plugin.md)
 
