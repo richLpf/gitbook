@@ -52,10 +52,27 @@ gitbook的使用
 
 gitbook-cli安装
 
+```
 npm i -g gitbook-cli
+```
+创建项目
+
+```
+
+```
 
 生成目录
 
+```
 gitbook init
 
 gitbook serve
+
+```
+
+安装插件
+
+```
+
+
+```
