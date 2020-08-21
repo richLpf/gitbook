@@ -10,7 +10,6 @@
     * [安装配置](base/config.md)
     * [help](base/help.md)
     * [项目实战](base/option.md)
-    * [分支操作](base/branch.md)
     * [忽略文件](base/忽略.md)
     * [命令总览](base/overview.md)
 * [git命令](cmd/README.md)
