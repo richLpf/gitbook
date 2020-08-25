@@ -29,7 +29,7 @@
             "size": "small"
         },
         "edit-link": {
-            "base": "https://github.com/richLpf/gitbook",
+            "base": "https://github.com/richLpf/gitbook/blob/master/",
             "label": "编辑当前页面"
         },
         "sharing": {
