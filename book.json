@@ -1,0 +1,61 @@
+{
+    "title": "Git入门到进阶",
+    "description": "Git入门，Git常用的方法和工作中常见的问题，gitlab、github等仓库的使用",
+    "author": "pengfei.lv",
+    "language": "zh-hans",
+    "root": ".",
+    "plugins": [
+        "edit-link",
+        "copy-code-button",
+        "splitter",
+        "pageview-count",
+        "popup",
+        "-sharing", 
+        "sharing-plus",
+        "chapter-fold",
+        "expandable-chapters",
+        "-lunr",
+        "github",
+        "gittalk",
+        "anchor-navigation-ex",
+        "simple-page-toc"
+    ],
+    "pluginsConfig": {
+        "github-buttons": {
+            "repo": "richLpf/gitbook",
+            "types": [
+                "star"
+            ],
+            "size": "small"
+        },
+        "edit-link": {
+            "base": "https://github.com/richLpf/gitbook",
+            "label": "编辑当前页面"
+        },
+        "sharing": {
+            "all": ["weibo", "qq", "qzone", "douban"
+            ]
+        },
+        "chapter-fold":{},
+        "github": {
+            "url": "https://github.com/richLpf/gitbook"
+        },
+        "simple-page-toc": {
+          "maxDepth": 3,
+          "skipFirstH1": true
+        },
+        "gittalk": {
+          "clientID": "e893b71fc36998d82f8e",
+          "clientSecret": "d25b2490666b9105dea0c7ecfbae294a4eef9caa",
+          "repo": "gitbook",
+          "owner": "richLpf",
+          "admin": [
+            "richLpf"
+          ],
+          "distractionFreeMode": false
+        },
+        "anchor-navigation-ex": {
+          "associatedWithSummary": true
+        }
+    }
+}

@@ -54,11 +54,15 @@ gitbook-cli安装
 
 ```
 npm i -g gitbook-cli
+
+gitbook -V
 ```
 创建项目
 
 ```
+mkdir git-learn
 
+cd git-learn
 ```
 
 生成目录
@@ -73,6 +77,8 @@ gitbook serve
 安装插件
 
 ```
+//book.json文件，见根目录
+touch book.json
 
-
+npm install gitbook-plugin-[插件名]
 ```
