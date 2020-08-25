@@ -1,5 +1,9 @@
 # 简单介绍
 
+## 简介
+
+本文档包括Git的入门、Git的命令汇总、Git的进阶、工作中常见Git问题汇总、Github的使用、Github Action、Gitlab的使用、CICD等内容。
+
 ## 初衷
 
 最近辅导刚入职的毕业新生，发现刚开始工作的朋友对于git简直是迷茫的不行。
@@ -46,39 +50,3 @@ git远程仓库
 git分支管理
 - git分支管理
 
-gitbook的使用
-
-## 文档操作
-
-gitbook-cli安装
-
-```
-npm i -g gitbook-cli
-
-gitbook -V
-```
-创建项目
-
-```
-mkdir git-learn
-
-cd git-learn
-```
-
-生成目录
-
-```
-gitbook init
-
-gitbook serve
-
-```
-
-安装插件
-
-```
-//book.json文件，见根目录
-touch book.json
-
-npm install gitbook-plugin-[插件名]
-```

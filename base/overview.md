@@ -9,13 +9,15 @@ Git命令很多，这里列举下：
 git config
 
 
-## 创建仓库
+## 仓库
 
 > 通过这两个命令可以创建Git仓库
 
 git init
 
 git clone
+
+git remote
 
 
 ## 基本操作
