@@ -25,4 +25,21 @@ gitbook serve
 ```
 __目录结构见SUMMARY.md__
 
+## gitbook目录结构
 
+
+如何在markdown中打印项目目录结构
+https://www.jianshu.com/p/e38a07f824a2
+
+
+Gitbook各种使用方法参考文章
+
+https://juejin.im/post/6844903793033740302
+
+Gitbook使用方法
+
+https://yangjh.oschina.io/gitbook/faq/Plugins.html
+
+gitbook插件参考
+
+https://www.jianshu.com/p/427b8bb066e6

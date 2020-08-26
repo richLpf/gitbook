@@ -3,14 +3,64 @@
 ## 安装插件
 
 ```
-//book.json文件，见根目录
+// book.json文件，见根目录
 touch book.json
 
-npm install gitbook-plugin-[插件名]
-
-// 下载插件使用gitbook install,不要使用npm,会出现插件不起作用的情况
+// 下载插件使用gitbook install,不要使用npm,会出现插件不起作用的情况,可能和网络有关
 gitbook install
+
+// 安装插件（不推荐使用）
+npm install gitbook-plugin-[插件名]
 ```
+
+## 常用插件
+
+- 删除原有插件
+- 删除自带的gitbook标识
+- 安装分享、搜索插件
+- 目录插件
+  - 目录折叠
+  - 页面目录导航
+- 插入音频
+  - 插入音乐
+  - 插入视频
+  - 插入图片
+
+
+## 其他
+
+- 打印项目目录https://www.npmjs.com/package/treer
+
+> 插入音频
+
+```
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=34341360&auto=1&height=66"></iframe>
+```
+
+> 视频插入
+
+```
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+<source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+</video>
+
+```
+
+> 插入音乐
+
+```
+<audio id="audio" controls="" preload="none">
+      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
+</audio>
+```
+
+> github仓库内容
+
+<iframe
+    style="margin-left: 2px; margin-bottom:-5px;"
+    frameborder="0" scrolling="0" width="100px" height="20px"
+    src="https://ghbtns.com/github-btn.html?user=richLpf&repo=gitbook&type=star&count=true" >
+</iframe>
 
 ## book.json文件
 
@@ -35,7 +85,7 @@ gitbook install
         "github",  //github图表
         "gittalk",   //github评论
         "anchor-navigation-ex",  //页面导航
-        "simple-page-toc"
+        "simple-page-toc" // 页面目录
     ],
     "pluginsConfig": {
         "github-buttons": {
@@ -77,6 +127,57 @@ gitbook install
 }
 ```
 
+## 各个插件展示
+
+### 目录相关内容
+
+#### "simple-page-toc"生成右侧悬浮目录
+
+```
+{
+    "plugins": [
+        "page-treeview"
+    ],
+    "pluginsConfig": {
+        "page-treeview": {
+            "copyright": "Copyright &#169; aleen42",
+            "minHeaderCount": "2",
+            "minHeaderDeep": "2"
+        }
+    }
+}
+```
+如图所示：gitbook-menu.png
+
+#### "page-treeview"生成页面头部目录
+
+```
+{
+    "plugins": [
+        "page-treeview"
+    ],
+    "pluginsConfig": {
+        "page-treeview": {
+            "copyright": "Copyright &#169; aleen42",
+            "minHeaderCount": "2",
+            "minHeaderDeep": "2"
+        }
+    }
+}
+
+```
+如图所示：
+
+
+#### flexible-alerts 警报
+
+```
+> [!NOTE]
+> 这是一个简单的Note类型的使用，所有的属性都是默认值。
+
+```
+
+
 ## 静态文件利用github进行评论的方法`gittalk`
 
 ```
@@ -93,3 +194,4 @@ gitbook install
 ```
 
 参数获取方法：
+
