@@ -10,6 +10,10 @@ github是公共的仓库，只要我们注册了账号，就可以将我们的�
 
 官方地址: https://github.com
 
+## 通过github部署静态网站
+
+示例：将本文档通过github部署
+
 
 ## github action自动发布
 
