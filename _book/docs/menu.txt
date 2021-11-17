@@ -1,0 +1,56 @@
+D:\project\gitbook\git-learn
+├─.gitignore
+├─book.json
+├─README.md
+├─SUMMARY.md
+├─more
+|  ├─go.md
+|  ├─README.md
+|  ├─rep.md
+|  ├─source.md
+|  └ssh.md
+├─gitlab
+|   ├─CICD.md
+|   ├─README.md
+|   ├─快速使用.md
+|   └部署.md
+├─github
+|   ├─README.md
+|   └认识.md
+├─gitbook
+|    ├─plugin.md
+|    └README.md
+├─git
+|  ├─cmd.md
+|  ├─README.md
+|  ├─sourceTree.md
+|  ├─分支管理.md
+|  ├─基础.md
+|  ├─工作问题.md
+|  ├─快速上手.md
+|  ├─快速使用.md
+|  ├─提示.md
+|  └版本管理.md
+├─cmd
+|  ├─add.md
+|  ├─alias.md
+|  ├─branch.md
+|  ├─checkout.md
+|  ├─commit.md
+|  ├─config.md
+|  ├─log.md
+|  ├─merge.md
+|  ├─push.md
+|  ├─README.md
+|  ├─reset.md
+|  └tag.md
+├─base
+|  ├─config.md
+|  ├─help.md
+|  ├─option.md
+|  ├─overview.md
+|  ├─README.md
+|  ├─优势.md
+|  ├─忽略.md
+|  ├─概念.md
+|  └版本控制.md
