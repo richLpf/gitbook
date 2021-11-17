@@ -15,6 +15,12 @@ mkdir git-learn
 cd git-learn
 ```
 
+## 打包构建
+
+gitbook build 默认生成_book下
+
+gitbook build ./ ./docs
+
 ## 生成目录
 
 ```
