@@ -31,6 +31,10 @@ gitbook serve
 ```
 __目录结构见SUMMARY.md__
 
+## 关联gitbook网站，生成网站效果
+
+
+
 ## gitbook目录结构
 
 
