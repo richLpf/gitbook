@@ -1,7 +1,7 @@
 # Summary
 
 * [前言](README.md)
-* [浏览器安全](README.md)
+* [浏览器安全](browser-security/README.md)
     * [同源策略](browser-security/same-origin-policy.md)
     * [XSS攻击](browser-security/xss.md)
 * [未分类](unknown/README.md)
