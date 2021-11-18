@@ -1,5 +1,3 @@
-## 同源策略
-
 ## 一、浏览器安全
 
 无风险的世界不存在，包括浏览器，我们知道Web世界是开放的，包容的。但是开放和风险是对立的。
@@ -190,4 +188,4 @@ window.addEventListener("message", receiveMessage, false);
 
 ## 六、参考文章
 - [阮一峰CORS](http://www.ruanyifeng.com/blog/2016/04/cors.html)
-- https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP
+- [csp](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP)
