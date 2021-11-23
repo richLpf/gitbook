@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>日常整理 · Git入门到进阶</title>
+        <title>CSRF攻击 · Git入门到进阶</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="standard.html" />
+    <link rel="next" href="../unknown/" />
     
     
-    <link rel="prev" href="../browser-security/CSRF.html" />
+    <link rel="prev" href="xss.html" />
     
 
     </head>
@@ -139,9 +139,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../browser-security/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../browser-security/">
+                <a href="./">
             
                     
                     浏览器安全
@@ -153,9 +153,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../browser-security/same-origin-policy.html">
+        <li class="chapter " data-level="1.3.1" data-path="same-origin-policy.html">
             
-                <a href="../browser-security/same-origin-policy.html">
+                <a href="same-origin-policy.html">
             
                     
                     同源策略
@@ -166,9 +166,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../browser-security/xss.html">
+        <li class="chapter " data-level="1.3.2" data-path="xss.html">
             
-                <a href="../browser-security/xss.html">
+                <a href="xss.html">
             
                     
                     XSS攻击
@@ -179,9 +179,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../browser-security/CSRF.html">
+        <li class="chapter active" data-level="1.3.3" data-path="CSRF.html">
             
-                <a href="../browser-security/CSRF.html">
+                <a href="CSRF.html">
             
                     
                     CSRF攻击
@@ -197,9 +197,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../unknown/">
             
-                <a href="./">
+                <a href="../unknown/">
             
                     
                     日常整理
@@ -211,9 +211,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="standard.html">
+        <li class="chapter " data-level="1.4.1" data-path="../unknown/standard.html">
             
-                <a href="standard.html">
+                <a href="../unknown/standard.html">
             
                     
                     前端规范
@@ -440,7 +440,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >日常整理</a>
+        <a href=".." >CSRF攻击</a>
     </h1>
 </div>
 
@@ -455,10 +455,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x6682;&#x65F6;&#x672A;&#x5206;&#x7C7B;&#x6587;&#x7AE0;"><b>1.1. </b>&#x6682;&#x65F6;&#x672A;&#x5206;&#x7C7B;&#x6587;&#x7AE0;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x6682;&#x65F6;&#x672A;&#x5206;&#x7C7B;&#x6587;&#x7AE0;"><a name="&#x6682;&#x65F6;&#x672A;&#x5206;&#x7C7B;&#x6587;&#x7AE0;" class="anchor-navigation-ex-anchor" href="#&#x6682;&#x65F6;&#x672A;&#x5206;&#x7C7B;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6682;&#x65F6;&#x672A;&#x5206;&#x7C7B;&#x6587;&#x7AE0;</h2>
-<blockquote>
-<p>&#x8BB0;&#x5F55;&#x4E00;&#x4E9B;&#x65E5;&#x5E38;&#x7684;&#x66F4;&#x6587;<div id="gitalk-container"></div><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script></p>
-</blockquote>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#csrf&#x653B;&#x51FB;"><b>1.1. </b>CSRF&#x653B;&#x51FB;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E00;&#x3001;&#x524D;&#x8A00;"><b>1.1.1. </b>&#x4E00;&#x3001;&#x524D;&#x8A00;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x3001;&#x4EC0;&#x4E48;&#x662F;csrf&#x653B;&#x51FB;"><b>1.1.2. </b>&#x4E8C;&#x3001;&#x4EC0;&#x4E48;&#x662F;CSRF&#x653B;&#x51FB;</a></li><li><span class="title-icon "></span><a href="#&#x4E09;&#x3001;&#x5982;&#x4F55;&#x963B;&#x6B62;csrf&#x653B;&#x51FB;"><b>1.1.3. </b>&#x4E09;&#x3001;&#x5982;&#x4F55;&#x963B;&#x6B62;CSRF&#x653B;&#x51FB;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="csrf&#x653B;&#x51FB;"><a name="csrf&#x653B;&#x51FB;" class="anchor-navigation-ex-anchor" href="#csrf&#x653B;&#x51FB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. CSRF&#x653B;&#x51FB;</h2>
+<h3 id="&#x4E00;&#x3001;&#x524D;&#x8A00;"><a name="&#x4E00;&#x3001;&#x524D;&#x8A00;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x524D;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x4E00;&#x3001;&#x524D;&#x8A00;</h3>
+<p>&#x6211;&#x4EEC;&#x5E38;&#x5E38;&#x542C;&#x5230;&#x8FD9;&#x6837;&#x4E00;&#x53E5;&#x8BDD;&#xFF1A;&#x9ED8;&#x8BA4;&#x7684;&#x94FE;&#x63A5;&#x4E0D;&#x8981;&#x70B9;&#xFF0C;&#x90A3;&#x4E9B;&#x5E74;&#x4E5F;&#x542C;&#x8FC7;&#xFF0C;&#x90AE;&#x7BB1;&#x4E2D;&#x7684;&#x5783;&#x573E;&#x94FE;&#x63A5;&#x4E0D;&#x8981;&#x70B9;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x53EF;&#x80FD;&#x662F;&#x9ED1;&#x5BA2;&#x53D1;&#x8D77;&#x7684;CSRF&#x653B;&#x51FB;&#xFF0C;&#x6240;&#x4EE5;&#x518D;&#x70B9;&#x51FB;&#x4E4B;&#x524D;&#x6700;&#x597D;&#x662F;&#x786E;&#x8BA4;&#x94FE;&#x63A5;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;</p>
+<h3 id="&#x4E8C;&#x3001;&#x4EC0;&#x4E48;&#x662F;csrf&#x653B;&#x51FB;"><a name="&#x4E8C;&#x3001;&#x4EC0;&#x4E48;&#x662F;csrf&#x653B;&#x51FB;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;&#x4EC0;&#x4E48;&#x662F;csrf&#x653B;&#x51FB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x4E8C;&#x3001;&#x4EC0;&#x4E48;&#x662F;CSRF&#x653B;&#x51FB;</h3>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x8BF4;&#x660E;CSRF&#x653B;&#x51FB;&#xFF0C;&#x65E9;&#x4E9B;&#x5E74;GMail&#x90AE;&#x7BB1;&#x6709;&#x4E2A;&#x6F0F;&#x6D1E;&#xFF0C;&#x5F53;&#x7136;&#x9ED1;&#x5BA2;&#x53D1;&#x9001;&#x653B;&#x51FB;&#x94FE;&#x63A5;&#x5230;&#x90AE;&#x7BB1;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x767B;&#x5F55;&#x90AE;&#x7BB1;&#x6253;&#x5F00;</p>
+<h3 id="&#x4E09;&#x3001;&#x5982;&#x4F55;&#x963B;&#x6B62;csrf&#x653B;&#x51FB;"><a name="&#x4E09;&#x3001;&#x5982;&#x4F55;&#x963B;&#x6B62;csrf&#x653B;&#x51FB;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x5982;&#x4F55;&#x963B;&#x6B62;csrf&#x653B;&#x51FB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x4E09;&#x3001;&#x5982;&#x4F55;&#x963B;&#x6B62;CSRF&#x653B;&#x51FB;</h3>
+<p><div id="gitalk-container"></div><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script></p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -487,12 +491,12 @@
 
             
                 
-                <a href="../browser-security/CSRF.html" class="navigation navigation-prev " aria-label="Previous page: CSRF攻击">
+                <a href="xss.html" class="navigation navigation-prev " aria-label="Previous page: XSS攻击">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="standard.html" class="navigation navigation-next " aria-label="Next page: 前端规范">
+                <a href="../unknown/" class="navigation navigation-next " aria-label="Next page: 日常整理">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -503,7 +507,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"日常整理","level":"1.4","depth":1,"next":{"title":"前端规范","level":"1.4.1","depth":2,"path":"unknown/standard.md","ref":"unknown/standard.md","articles":[]},"previous":{"title":"CSRF攻击","level":"1.3.3","depth":2,"path":"browser-security/CSRF.md","ref":"browser-security/CSRF.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","copy-code-button","splitter","pageview-count","popup","-sharing","sharing-plus","chapter-fold","expandable-chapters","-lunr","github","gittalk","anchor-navigation-ex","simple-page-toc","-search","search-pro","flexible-alerts"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/richLpf/gitbook"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"github-buttons":{"repo":"richLpf/gitbook","types":["star"],"size":"small"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"copy-code-button":{},"sharing":{"all":["weibo","qq","qzone","douban"]},"edit-link":{"label":"编辑当前页面","base":"https://github.com/richLpf/gitbook/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"gittalk":{"clientID":"e893b71fc36998d82f8e","clientSecret":"d25b2490666b9105dea0c7ecfbae294a4eef9caa","repo":"gitbook","owner":"richLpf","admin":["richLpf"],"distractionFreeMode":false},"expandable-chapters":{}},"theme":"default","author":"pengfei.lv","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Git入门到进阶","language":"zh-hans","gitbook":"*","description":"Git入门，Git常用的方法和工作中常见的问题，gitlab、github等仓库的使用"},"file":{"path":"unknown/README.md","mtime":"2021-11-17T13:59:24.475Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-23T01:56:21.085Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CSRF攻击","level":"1.3.3","depth":2,"next":{"title":"日常整理","level":"1.4","depth":1,"path":"unknown/README.md","ref":"unknown/README.md","articles":[{"title":"前端规范","level":"1.4.1","depth":2,"path":"unknown/standard.md","ref":"unknown/standard.md","articles":[]}]},"previous":{"title":"XSS攻击","level":"1.3.2","depth":2,"path":"browser-security/xss.md","ref":"browser-security/xss.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","copy-code-button","splitter","pageview-count","popup","-sharing","sharing-plus","chapter-fold","expandable-chapters","-lunr","github","gittalk","anchor-navigation-ex","simple-page-toc","-search","search-pro","flexible-alerts"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/richLpf/gitbook"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"github-buttons":{"repo":"richLpf/gitbook","types":["star"],"size":"small"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"copy-code-button":{},"sharing":{"all":["weibo","qq","qzone","douban"]},"edit-link":{"label":"编辑当前页面","base":"https://github.com/richLpf/gitbook/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"gittalk":{"clientID":"e893b71fc36998d82f8e","clientSecret":"d25b2490666b9105dea0c7ecfbae294a4eef9caa","repo":"gitbook","owner":"richLpf","admin":["richLpf"],"distractionFreeMode":false},"expandable-chapters":{}},"theme":"default","author":"pengfei.lv","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Git入门到进阶","language":"zh-hans","gitbook":"*","description":"Git入门，Git常用的方法和工作中常见的问题，gitlab、github等仓库的使用"},"file":{"path":"browser-security/CSRF.md","mtime":"2021-11-22T04:45:04.914Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-23T01:56:21.085Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
