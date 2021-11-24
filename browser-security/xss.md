@@ -41,6 +41,8 @@ XSS攻击常被分为三类：存储型攻击、反射型攻击、基于DOM的XS
 
 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fb4e440c55ed4841a70a15de04804332~tplv-k3u1fbpfcp-watermark.image?)
 
+我们来模拟下存储型攻击
+
 
 
 #### 2）反射型攻击
@@ -52,12 +54,9 @@ XSS攻击常被分为三类：存储型攻击、反射型攻击、基于DOM的XS
 页面中又直接渲染html的变量，直接渲染html的，如下代码，直接读取url参数query， 在页面展示，如果后端服务没有经过过滤，就有可能将query的代码引入页面中执行，造成攻击
 
 
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7ca3f617f24448d8b1bbc578d350fd1~tplv-k3u1fbpfcp-watermark.image?)
 
-**![image-20211122222815674](/Users/user/Library/Application Support/typora-user-images/image-20211122222815674.png)**
-
-
-
-![image-20211122222519524](/Users/user/Library/Application Support/typora-user-images/image-20211122222519524.png)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/12b90543e2b54c4590dafd8d694ae3a2~tplv-k3u1fbpfcp-watermark.image?)
 
 #### 3)基于DOM的XSS攻击
 
@@ -94,8 +93,8 @@ XSS攻击常被分为三类：存储型攻击、反射型攻击、基于DOM的XS
 
 打开页面后：
 
-![image-20211122220400259](/Users/user/Library/Application Support/typora-user-images/image-20211122220400259.png)
 
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd4e98e4eaaa4843ada9806e68b8c878~tplv-k3u1fbpfcp-watermark.image?)
 如果将其中的攻击脚本插入用户的页面中，然后向第三方服务器发送cookies，这就构成了XSS攻击
 
 
