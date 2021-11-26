@@ -21,7 +21,7 @@ CSRF攻击发起于第三方网站，比较隐蔽，可以直接对用户的利�
 - 3、a.com验证非法请求的登录凭证，误以为是用户执行了某种操作。
 - 4、攻击成功，a.com执行操作（转账、开通权限、邮件过滤等）
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92f0be3288a64a4caf9d7686afdebda5~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://raw.githubusercontent.com/richLpf/pictures/main/gitbook/92f0be3288a64a4caf9d7686afdebda5_tplv-k3u1fbpfcp-watermark.7f4p78edbqc0.png?)
 
 所以CSRF攻击要满足两个条件：
 - 攻击站点保持登录状态
