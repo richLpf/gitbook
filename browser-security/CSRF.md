@@ -21,7 +21,7 @@ CSRF攻击发起于第三方网站，比较隐蔽，可以直接对用户的利�
 - 3、a.com验证非法请求的登录凭证，误以为是用户执行了某种操作。
 - 4、攻击成功，a.com执行操作（转账、开通权限、邮件过滤等）
 
-![image.png](https://raw.githubusercontent.com/richLpf/pictures/main/gitbook/92f0be3288a64a4caf9d7686afdebda5_tplv-k3u1fbpfcp-watermark.7f4p78edbqc0.png?)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92f0be3288a64a4caf9d7686afdebda5~tplv-k3u1fbpfcp-watermark.image?)
 
 所以CSRF攻击要满足两个条件：
 - 攻击站点保持登录状态
@@ -62,6 +62,8 @@ A怀疑自己受到CSRF攻击，就重置账号后找到之前的异常邮件，
 
 ## 四、CSRF攻击的实践
 
+- 一、一个正常的可以登录的网站
+- 二、一个攻击的请求或可以提交的页面
 
 
 ## 五、如何阻止CSRF攻击
@@ -76,13 +78,47 @@ A怀疑自己受到CSRF攻击，就重置账号后找到之前的异常邮件，
 
 1、前端增加用户在线验证，将Cookie替换或增加Token验证
 
+网站为了保持登录状态，开始一般都是登录后，服务器默认生成Cookies，客户端保存Cookies，每次请求默认都会携带Cookies，用户后端验证用户身份。
+
+但Cookie会存在被攻击的风险，所以可以替换成Token，Token一般是后端服务由随机字符串+时间戳+其他生成然后通过加密算法生成。
+
+用户登录后生成一个Token，后端保存起来，每次请求就可以验证Token的合法性和有效期，甚至可以封装user信息，这样黑客就不容易冒充用户发起攻击，即使知道了加密的结构也没法通过登录生成Token。
+
+当然这样数据库就会保存大量的Token，对于服务器会造成一定的压力，也可以采取下面一种措施：同时保留Cookie和Token，Token仅用来防止CSRF攻击，不再保存数据库，直接在客户端保存，请求发送到服务器后，根据生成Token的算法计算Token的有效期和合法性，这样就避免了数据库读取的压力。
+
 ### 3、阻止第三方服务器向站点发送请求
 
-#### 1）csp
+#### 1）samesite origin(兼容性不好)
 
-#### 2）samesite origin(兼容性不好)
+专门为CSRF而生的API，具体设置如下
 
-#### 3）Token
+```
+set-cookies 
+```
+
+| 属性 |  |
+| --- | --- |
+| Strict | |
+| Lax |  |
+| None | |
+
+注意：该属性为新增加属性，兼容性差点
+
+#### 2）同源检测，服务端校验请求来源
+
+- 同源策略可以防止csrf攻击吗？
+- 还需要验证请求头吗？
+- 验证请求来源origin和referer
+
+开三台服务器，尝试转发服务，获取Origin和referer参数
+
+#### 3）CSP
+
+
+#### 4) 双重Cookie验证
+
+
+#### 4）Token
 
 token的校验很常见，不仅可以用来做登录验证，也可以在使用Cookies做登录认证的同时使用token做CSRF的鉴权
 
@@ -94,7 +130,4 @@ token都是由后端服务拼接随机字符串和时间戳，用户id等内容�
 
 2、保存的前端浏览器中
 
-#### 4）同源检测，服务端校验请求来源
 
-同源策略可以防止csrf攻击吗？还需要验证请求头吗？
-验证请求来源origin和referer
