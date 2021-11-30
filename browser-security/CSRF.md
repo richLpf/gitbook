@@ -65,9 +65,11 @@ A怀疑自己受到CSRF攻击，就重置账号后找到之前的异常邮件，
 ### 1、前期准备：一个正常的可以登录的网站
 
 **index.js**
+
 ![image.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638257430108web-site-demo.png)
 
 **web.html**
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -129,6 +131,7 @@ A怀疑自己受到CSRF攻击，就重置账号后找到之前的异常邮件，
 </html>
 ```
 **启动端口为8080的node服务**
+
 ![image.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638257624713node.png)
 
 ### 3、模拟攻击
@@ -139,7 +142,7 @@ A怀疑自己受到CSRF攻击，就重置账号后找到之前的异常邮件，
 
 **2、用户点击了未读邮件的恶意链接**
 
-![image.png](hhttps://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/16382574003053.png)
+![image.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/16382574003053.png)
 
 **3、在正常站点后端Api，通过Cookie认为这是一个正常的用户操作，执行了某种操作**
 
