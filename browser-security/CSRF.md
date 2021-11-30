@@ -21,7 +21,7 @@ CSRF攻击发起于第三方网站，比较隐蔽，可以直接对用户的利�
 - 3、a.com验证非法请求的登录凭证，误以为是用户执行了某种操作。
 - 4、攻击成功，a.com执行操作（转账、开通权限、邮件过滤等）
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92f0be3288a64a4caf9d7686afdebda5~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/163825750971692f0be3288a64a4caf9d7686afdebda5_tplv-k3u1fbpfcp-watermark.png)
 
 所以CSRF攻击要满足两个条件：
 - 攻击站点保持登录状态
@@ -62,13 +62,96 @@ A怀疑自己受到CSRF攻击，就重置账号后找到之前的异常邮件，
 
 ## 四、CSRF攻击的实践
 
-- 一、一个正常的可以登录的网站
-- 二、一个攻击的请求或可以提交的页面
+### 1、前期准备：一个正常的可以登录的网站
 
+**index.js**
+![image.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638257430108web-site-demo.png)
+
+**web.html**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户正常访问网站</title>
+    <style>
+        #app {
+            color: red
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>当前为A站点：用户访问的正常网站，默认用户已登录站点，并缓存Cookies</p>
+        <p>站点的Cookie是：<span id="app"></span></p>
+        <a target="target" href="http://localhost:8080/index.html">CSRF攻击的恶意链接</p>
+    </div>
+    <script>
+        document.cookie = "user:zhangsan"
+        document.getElementById("app").innerHTML = document.cookie
+    </script>
+</body>
+</html>
+```
+
+### 2、前期准备：一个攻击的请求或可以提交的页面
+
+**发起CSRF攻击的站点**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csrf攻击实践</title>
+</head>
+<body>
+    <p>当前站点为B站点：是发起csrf攻击的站点</p>
+    <div>
+        <ul>
+            <li>1、当打开该站点，该站点将请求A站点的api</li>
+            <li>2、A站点接收到请求后，验证Cookie，认为是A站点的正常请求</li>
+            <li>3、A站点执行Api操作，然后用户攻击成功</li>
+        </ul>
+    </div>
+    <form method="POST" action="http://localhost:9000/api" enctype="multipart/form-data"> 
+        <input type="hidden" name="lisi" value="true"/> 
+        <input type="hidden" name="email" value="hacker@hack.com"/> 
+    </form> 
+    <script> 
+        document.forms[0].submit();
+    </script>
+</body>
+</html>
+```
+**启动端口为8080的node服务**
+![image.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638257624713node.png)
+
+### 3、模拟攻击
+
+**1、用户正常访问的登录页面**
+
+![image.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638257418490web-page.png)
+
+**2、用户点击了未读邮件的恶意链接**
+
+![image.png](hhttps://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/16382574003053.png)
+
+**3、在正常站点后端Api，通过Cookie认为这是一个正常的用户操作，执行了某种操作**
+
+![image.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/16382574082174.png)
 
 ## 五、如何阻止CSRF攻击
 
-根据CSRF攻击的特点：（1）通过Cookie冒用用户信息（2）攻击请求来源于第三方服务器，我们就可以采取一下措施阻止CSRF攻击
+根据CSRF攻击的特点：
+
+（1）通过Cookie冒用用户信息
+
+（2）攻击请求来源于第三方服务器，我们就可以采取一下措施阻止CSRF攻击
 
 ### 1、不点击陌生或者不被信任的网址
 
@@ -130,4 +213,18 @@ token都是由后端服务拼接随机字符串和时间戳，用户id等内容�
 
 2、保存的前端浏览器中
 
+## 模仿攻击
+- 两个后端服务、
+    - 一个属于用户正常访问的站点（Express）
+    - 一个属于黑客
+- 一个前端
+    - express
+    - 一个html页面
+    - 一个单页面应用
+    
+    
+    
+    
+    
+    
 
