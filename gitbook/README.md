@@ -1,38 +1,44 @@
-# gitbook的使用
+# Gitbook博客搭建
 
-通过Github、GitBook、Git Actions、utools图床插件 和 Typora 打造自己的博客系统
+
+
+> 通过Github、GitBook、Git Actions、utools图床插件 和 Typora 打造自己的博客系统
+
+
+
+## 相关技术
 
 - github
-
   - github actions
-
 - gitbook
-
   - 自动同步Github代码
-
 - utools
-
 - github作为图床
-
 - Typora作为编辑器（vscode）
 
-  
 
-  **本地编辑**
 
-  ![本地编辑](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343355358Typora-picture.png)
+## 截图展示
 
-  
 
-  **Git提交，自动执行Git Actions**
 
-  ![github Actions](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343411641action.png)
+### 1、本地编辑
 
-  
+![本地编辑](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343355358Typora-picture.png)
 
-  **打开个人博客**
 
-  ![博客](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343347157gitbook.png)
+
+### 2、Git提交，自动执行Git Actions
+
+![github Actions](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343411641action.png)
+
+
+
+### 3、打开个人博客
+
+![博客](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343347157gitbook.png)
+
+
 
 ## gitbook-cli安装
 
@@ -41,6 +47,8 @@ npm i -g gitbook-cli
 
 gitbook -V
 ```
+
+
 ## 创建项目
 
 ```
@@ -49,11 +57,15 @@ mkdir git-learn
 cd git-learn
 ```
 
+
+
 ## 打包构建
 
 gitbook build 默认生成_book下
 
 gitbook build ./ ./docs
+
+
 
 ## 生成目录
 
@@ -65,7 +77,11 @@ gitbook serve
 ```
 __目录结构见SUMMARY.md__
 
+
+
 ## 关联gitbook网站，生成网站效果
+
+GitBook 关联
 
 
 
