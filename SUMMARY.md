@@ -13,6 +13,3 @@
     * [命令总览](git/base/overview.md)
 * [GitBook教程](gitbook/README.md)
     * [插件](gitbook/plugin.md)
-    * [部署](gitbook/deploy.md)
-    * [常用插件](gitbook/more.md)
-

@@ -226,13 +226,7 @@ token都是由后端服务拼接随机字符串和时间戳，用户id等内容�
 
 1、token记录在数据库中
 
-2、保存的前端浏览器中
-
-
-
-## 更新测试 
-
-![tup](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638353424944action.png)   
+2、保存的前端浏览器中   
 
 
 
