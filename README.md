@@ -35,7 +35,7 @@
 
 
 
-#### 快捷入口
+## 快捷入口
 
 - [我的收藏](https://lpfbook.gitbook.io/docs/collection)
 - [浏览器安全](https://lpfbook.gitbook.io/docs/browser-security)
@@ -43,7 +43,7 @@
 
 
 
-## 注意：更新计划
+## 更新计划
 
 目前主要更新浏览器安全模块：
 
@@ -53,11 +53,6 @@
 - 系统安全
 - 网络安全
 - 站点监控
-
-
-
-## 更新模块
-
 - 前端英文优秀文档翻译
 - 前端CICD部署
 - Webpack

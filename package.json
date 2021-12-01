@@ -26,6 +26,7 @@
   "scripts": {
     "start": "gitbook serve",
     "build": "gitbook build ./ ./docs",
+    "deploy": "sh deploy.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
