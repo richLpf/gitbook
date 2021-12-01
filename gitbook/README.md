@@ -1,5 +1,8 @@
 # gitbook的使用
 
+通过Github、GitBook、Git Actions 和 Typora 打造自己的博客系统
+
+截图展示
 ## gitbook-cli安装
 
 ```
