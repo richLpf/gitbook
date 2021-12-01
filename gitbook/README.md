@@ -6,21 +6,42 @@
 
 
 
-## 相关技术
+## 一、前言
 
-- github
-  - github actions
-- gitbook
-  - 自动同步Github代码
-- utools
-- github作为图床
-- Typora作为编辑器（vscode）
+现在有一个个人博客其实很简单，注册个博客网站的账号就可以了。
 
+如果有自己的服务器啥的，可以通过wordpress搭建一套也很快。
 
+如果想免费，也可以通过Github和Gitee等搭建自己的博客。
 
-## 截图展示
+这里介绍就是通过Github和GitBook搭建一套一个免费的博客。
 
 
+
+## 二、使用到的技术和工具
+
+- [GitBook账号](https://www.gitbook.com/)：其实只要一个GitBook就可以在线创建自己的博客或者电子书了
+
+- [Git](https://git-scm.com/)：用来管理项目，默认安装
+
+- Node环境：默认安装
+
+- [gitbook](https://www.npmjs.com/package/gitbook)：gitbook项目脚手架
+
+- [Github仓库两个项目](https://github.com/)：一个用来放GitBook项目，一个用来做图片仓库
+
+- 图床工具：博客中一般都有图片，但是上传Git太麻烦，所以使用工具，选一个就可以了
+
+  - [在线图床](https://picx.xpoet.cn/#/management)
+  - [utools工具](https://u.tools/)
+
+- [Typora-Markdown编辑器](https://typora.io/dev_release.html)：1.x版本要收费了，可以下载0.x版本
+
+- Github Actions
+
+  
+
+## 三、项目展示
 
 ### 1、本地编辑
 
@@ -36,81 +57,19 @@
 
 ### 3、打开个人博客
 
-![博客](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343347157gitbook.png)
+![个人博客](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638364574867blog.png)
 
 
 
-## gitbook-cli安装
+## 四、实际部署
 
-```
-npm i -g gitbook-cli
+- 1、GitBook账号
 
-gitbook -V
-```
-
-
-## 创建项目
-
-```
-mkdir git-learn
-
-cd git-learn
-```
-
-
-
-## 打包构建
-
-gitbook build 默认生成_book下
-
-gitbook build ./ ./docs
-
-
-
-## 生成目录
-
-```
-gitbook init
-
-gitbook serve
-
-```
-__目录结构见SUMMARY.md__
-
-
-
-## 关联gitbook网站，生成网站效果
-
-GitBook 关联
-
-
-## 部署
-
-将gitbook部署在github页面上
-
-参考文档
-
-https://juejin.im/post/6844903793033740302
-
-## gitbook目录结构
-
-
-如何在markdown中打印项目目录结构
-https://www.jianshu.com/p/e38a07f824a2
-
-
-Gitbook各种使用方法参考文章
-
-https://juejin.im/post/6844903793033740302
-
-Gitbook使用方法
-
-https://yangjh.oschina.io/gitbook/faq/Plugins.html
-
-gitbook插件参考
-
-https://www.jianshu.com/p/427b8bb066e6
-
-可参考优秀的文档
-
-https://snowdreams1006.gitbook.io/www/#ke-long-wang-zhan
+- 2、[GitBook 脚手架使用](gitbook/gitbook-cli.md)
+- 3、用Github联动GitBook
+- 4、配置Github Actions
+- 5、图床配置和使用
+- 6、配置Github Page
+- 7、其他博客
+  - Hexo
+  - Vue-press

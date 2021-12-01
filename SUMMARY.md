@@ -12,4 +12,4 @@
     * [工作常见问题](git/more/工作问题.md)
     * [命令总览](git/base/overview.md)
 * [GitBook教程](gitbook/README.md)
-    * [插件](gitbook/plugin.md)
+    * [Gitbook-Cli](gitbook/gitbook-cli.md)
