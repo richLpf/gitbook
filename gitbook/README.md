@@ -24,7 +24,7 @@
 
 - [Git](https://git-scm.com/)：用来管理项目，默认安装
 
-- Node环境：默认安装
+- [Node环境](https://nodejs.org/zh-cn/)：默认安装
 
 - [gitbook](https://www.npmjs.com/package/gitbook)：gitbook项目脚手架
 
@@ -65,7 +65,7 @@
 
 - 1、GitBook账号
 
-- 2、[GitBook 脚手架使用](gitbook/gitbook-cli.md)
+- 2、[GitBook 脚手架使用](https://lpfbook.gitbook.io/docs/gitbook/gitbook-cli)
 - 3、用Github联动GitBook
 - 4、配置Github Actions
 - 5、图床配置和使用
