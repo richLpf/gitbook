@@ -1,8 +1,39 @@
 # gitbook的使用
 
-通过Github、GitBook、Git Actions 和 Typora 打造自己的博客系统
+通过Github、GitBook、Git Actions、utools图床插件 和 Typora 打造自己的博客系统
 
-截图展示
+- github
+
+  - github actions
+
+- gitbook
+
+  - 自动同步Github代码
+
+- utools
+
+- github作为图床
+
+- Typora作为编辑器（vscode）
+
+  
+
+  **本地编辑**
+
+  ![本地编辑](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343355358Typora-picture.png)
+
+  
+
+  **Git提交，自动执行Git Actions**
+
+  ![github Actions](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343411641action.png)
+
+  
+
+  **打开个人博客**
+
+  ![博客](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638343347157gitbook.png)
+
 ## gitbook-cli安装
 
 ```
