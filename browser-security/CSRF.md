@@ -186,15 +186,29 @@ Chrome 51 开始，浏览器的 Cookie 新增加了一个`SameSite`属性，用�
 
 SameSite有以下三个值，表示的含义如下：
 
-| 属性值 | 说明         |
-| ------ | ------------ |
-| Strict | 相同站点发送 |
-| Lax    | 部分发送     |
-| None   | 全部发送     |
+| 属性值 | 说明                                                         |
+| ------ | ------------------------------------------------------------ |
+| Strict | 最为严格，除非请求地址和服务器地址一致时才会发送Cookie，严格禁止了第三方Cookie |
+| Lax    | 相对放宽限制，除了a、link、form的GET提交携带Cookie，其他的都禁止 |
+| None   | 不限制Cookie发送，但还是遵守同源策略                         |
+
+Strict 过于严格，比如登录过的站点，从百度搜索跳转过去，要重新登录，所以相对不友好。
+
+设置了Strict和Lax模式，基本阻止了CSRF攻击的可能，但可能影响页面中的Form表单、iframe、ajax请求和图片请求。
+
+
 
 Chrome80之前默认None，之后默认Lax，下面是不同模式实际在项目中发送Cookie情况
 
-
+| 请求类型  |                 示例                 |    正常情况 | Lax         |
+| :-------- | :----------------------------------: | ----------: | :---------- |
+| 链接      |         `<a href="..."></a>`         | 发送 Cookie | 发送 Cookie |
+| 预加载    | `<link rel="prerender" href="..."/>` | 发送 Cookie | 发送 Cookie |
+| GET 表单  |  `<form method="GET" action="...">`  | 发送 Cookie | 发送 Cookie |
+| POST 表单 | `<form method="POST" action="...">`  | 发送 Cookie | 不发送      |
+| iframe    |    `<iframe src="..."></iframe>`     | 发送 Cookie | 不发送      |
+| AJAX      |            `$.get("...")`            | 发送 Cookie | 不发送      |
+| Image     |          `<img src="...">`           | 发送 Cookie | 不发送      |
 
 
 
@@ -204,11 +218,13 @@ Chrome80之前默认None，之后默认Lax，下面是不同模式实际在项�
 - 还需要验证请求头吗？
 - 验证请求来源origin和referer
 
-开三台服务器，尝试转发服务，获取Origin和referer参数
+我们知道CSRF攻击都是发起于第三方站点，所以请求的来源必要和服务器不同，而且浏览器会自动给请求增加Origin和Referer字段，用来识别请求来源，那么只要我们在后端设置请求的来源，就可以防止CSRF攻击。
+
+
 
 ### 2、解决Cookie冒用问题
 
-1、前端增加用户在线验证，将Cookie替换或增加Token验证
+### 1)、前端增加用户在线验证，将Cookie替换或增加Token验证
 
 网站为了保持登录状态，开始一般都是登录后，服务器默认生成Cookies，客户端保存Cookies，每次请求默认都会携带Cookies，用户后端验证用户身份。
 
@@ -218,12 +234,10 @@ Chrome80之前默认None，之后默认Lax，下面是不同模式实际在项�
 
 当然这样数据库就会保存大量的Token，对于服务器会造成一定的压力，也可以采取下面一种措施：同时保留Cookie和Token，Token仅用来防止CSRF攻击，不再保存数据库，直接在客户端保存，请求发送到服务器后，根据生成Token的算法计算Token的有效期和合法性，这样就避免了数据库读取的压力。
 
-#### 3）CSP
-
-#### 4) 双重Cookie验证
+#### 2)、 双重Cookie验证
 
 
-#### 4）Token
+#### 3)、Token
 
 token的校验很常见，不仅可以用来做登录验证，也可以在使用Cookies做登录认证的同时使用token做CSRF的鉴权
 
