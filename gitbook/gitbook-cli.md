@@ -39,7 +39,9 @@ gitbook serve
 
 __目录结构见SUMMARY.md__
 
-### 2、配置项目
+
+
+### 二、配置项目
 
 
 

@@ -36,10 +36,17 @@ CSRF攻击发起于第三方网站，比较隐蔽，可以直接对用户的利�
 
 - GET请求攻击
 
-
+​		构造非法的Get攻击请求
 
 - POST请求攻击
+
+  后端配置CORS接口跨域请求，如果要携带Cookie，那么必须要配置具体的请求域名`Access-Control-Allow-Origin, *test.cn`
+
+  如果配置成`Access-Control-Allow-Origin, *`是无法发送Cookie的，但对于Form提交来说确实可以携带Cookie的。所以CSRF POST攻击主要通过Form表单实现。下面有实战的例子。
+
 - 嵌入的攻击链接
+
+  主要对于内容型网站、论坛、博客等，可以允许用户评论等输入内容，如果黑客输入攻击链接，保存后，如果其他用户点击，就有可能发起攻击。
 
 ## 三、CSRF攻击的案例
 
@@ -73,7 +80,7 @@ A怀疑自己受到CSRF攻击，就重置账号后找到之前的异常邮件，
 
 ### 1、前期准备：一个正常的可以登录的网站
 
-**index.js**
+**index.js** 
 
 ![image.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1638257430108web-site-demo.png)
 
@@ -173,23 +180,23 @@ A怀疑自己受到CSRF攻击，就重置账号后找到之前的异常邮件，
 
 ### 2、阻止第三方服务器向站点发送请求
 
-#### 1）SameSite origin(兼容性不好)
+#### 1）SameSite origin(注意兼容性)
 
-Chrome 51 开始，浏览器的 Cookie 新增加了一个`SameSite`属性，用来防止 CSRF 攻击。具体设置如下
+Chrome 51 开始，浏览器的 Cookie 新增加了一个`SameSite`属性，用来防止 CSRF 攻击。
 
-```
-set-cookies 
-```
+SameSite有以下三个值，表示的含义如下：
 
-| 属性   |      |
-| ------ | ---- |
-| Strict |      |
-| Lax    |      |
-| None   |      |
+| 属性值 | 说明         |
+| ------ | ------------ |
+| Strict | 相同站点发送 |
+| Lax    | 部分发送     |
+| None   | 全部发送     |
 
-注意：该属性为新增加属性，兼容性差点
+Chrome80之前默认None，之后默认Lax，下面是不同模式实际在项目中发送Cookie情况
 
-具体配置方式：
+
+
+
 
 #### 2）同源检测，服务端校验请求来源
 
