@@ -236,6 +236,8 @@ Chrome80之前默认None，之后默认Lax，下面是不同模式实际在项�
 
 #### 2)、 双重Cookie验证
 
+双重Cookie，是指讲Cookie的部分放在url，CSRF 不能获取Cookie
+
 
 #### 3)、Token
 
