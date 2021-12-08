@@ -30,9 +30,14 @@
 ## 浏览器系列
 
 - [Web安全 - 同源策略]()
-
 - [Web安全 - XXS攻击]()
 -  [Web安全 - CSRF攻击远离和实践](https://lpfbook.gitbook.io/docs/browser-security/csrf)
+
+
+
+## Git
+
+- [Git多人开发分支管理](https://lpfbook.gitbook.io/docs/git/more/分支管理)
 
 
 

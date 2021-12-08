@@ -9,6 +9,7 @@
 * [日常整理](unknown/README.md)
     * [前端规范](unknown/standard.md)
 * [Git](git/README.md)
+    * [Git分支管理](git/more/分支管理.md)
     * [工作常见问题](git/more/工作问题.md)
     * [命令总览](git/base/overview.md)
 * [GitBook教程](gitbook/README.md)
