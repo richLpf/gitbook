@@ -38,6 +38,10 @@ CSRF攻击发起于第三方网站，比较隐蔽，可以直接对用户的利�
 
 ​		构造非法的Get攻击请求
 
+```js
+<img src="http://bank.cm/withdraw?amount=500000&for=zhangsan" >
+```
+
 - POST请求攻击
 
   后端配置CORS接口跨域请求，如果要携带Cookie，那么必须要配置具体的请求域名`Access-Control-Allow-Origin, *test.cn`
@@ -196,8 +200,6 @@ Strict 过于严格，比如登录过的站点，从百度搜索跳转过去，�
 
 设置了Strict和Lax模式，基本阻止了CSRF攻击的可能，但可能影响页面中的Form表单、iframe、ajax请求和图片请求。
 
-
-
 Chrome80之前默认None，之后默认Lax，下面是不同模式实际在项目中发送Cookie情况
 
 | 请求类型  |                 示例                 |    正常情况 | Lax         |
@@ -210,8 +212,6 @@ Chrome80之前默认None，之后默认Lax，下面是不同模式实际在项�
 | AJAX      |            `$.get("...")`            | 发送 Cookie | 不发送      |
 | Image     |          `<img src="...">`           | 发送 Cookie | 不发送      |
 
-
-
 #### 2）同源检测，服务端校验请求来源
 
 - 同源策略可以防止csrf攻击吗？
@@ -220,11 +220,21 @@ Chrome80之前默认None，之后默认Lax，下面是不同模式实际在项�
 
 我们知道CSRF攻击都是发起于第三方站点，所以请求的来源必要和服务器不同，而且浏览器会自动给请求增加Origin和Referer字段，用来识别请求来源，那么只要我们在后端设置请求的来源，就可以防止CSRF攻击。
 
+下面获取origin和referer，如果是第三方的请求，屏蔽即可。
+
+对于Referer，如果添加了Meta标签，请求头中的Referer将不会携带。
+
+```
+<meta name="referrer" content="never">
+```
+
+Origin和Referer在个别浏览器表现不同，如果都无法获取，直接禁止访问即可。
+
+![获取Origin和Referer](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/16394083526092.png)
 
 
-### 2、解决Cookie冒用问题
 
-### 1)、前端增加用户在线验证，将Cookie替换或增加Token验证
+### 3、增加Token校验
 
 网站为了保持登录状态，开始一般都是登录后，服务器默认生成Cookies，客户端保存Cookies，每次请求默认都会携带Cookies，用户后端验证用户身份。
 
@@ -234,24 +244,4 @@ Chrome80之前默认None，之后默认Lax，下面是不同模式实际在项�
 
 当然这样数据库就会保存大量的Token，对于服务器会造成一定的压力，也可以采取下面一种措施：同时保留Cookie和Token，Token仅用来防止CSRF攻击，不再保存数据库，直接在客户端保存，请求发送到服务器后，根据生成Token的算法计算Token的有效期和合法性，这样就避免了数据库读取的压力。
 
-#### 2)、 双重Cookie验证
-
-双重Cookie，是指讲Cookie的部分放在url，CSRF 不能获取Cookie
-
-
-#### 3)、Token
-
 token的校验很常见，不仅可以用来做登录验证，也可以在使用Cookies做登录认证的同时使用token做CSRF的鉴权
-
-token都是由后端服务拼接随机字符串和时间戳，用户id等内容后通过加密算法得到的。
-
-通过Token鉴权的几种方式
-
-1、token记录在数据库中
-
-2、保存的前端浏览器中   
-
-
-
-
-
