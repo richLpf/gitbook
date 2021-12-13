@@ -29,11 +29,11 @@
 
 - [Web安全 - 同源策略]()
 - [Web安全 - XXS攻击]()
--  [Web安全 - CSRF攻击远离和实践](https://lpfbook.gitbook.io/docs/browser-security/csrf)
+- [Web安全 - CSRF攻击远离和实践](https://lpfbook.gitbook.io/docs/browser-security/csrf)
 
 ## 文章翻译
 
-- [Restful API设计实践](https://lpfbook.gitbook.io/docs/translation/restful-api-cn)
+- [Restful API设计实践](https://lpfbook.gitbook.io/docs/unknown/restful-api-cn)
 
 ## Git
 
