@@ -27,8 +27,8 @@
 
 ## 浏览器系列
 
-- [Web安全 - 同源策略]()
-- [Web安全 - XXS攻击]()
+- [Web安全 - 同源策略](https://lpfbook.gitbook.io/docs/browser-security/same-origin-policy)
+- [Web安全 - XXS攻击](https://lpfbook.gitbook.io/docs/browser-security/xss)
 - [Web安全 - CSRF攻击远离和实践](https://lpfbook.gitbook.io/docs/browser-security/csrf)
 
 ## 文章翻译
