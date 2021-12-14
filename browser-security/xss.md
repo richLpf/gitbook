@@ -37,11 +37,9 @@ XSS攻击常被分为三类：存储型攻击、反射型攻击、基于DOM的XS
 第一步：输入恶意脚本到站点，没有过滤，所以可以上传到服务器
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4f4e92677dd44714a01edea104c1b8bf~tplv-k3u1fbpfcp-watermark.image?)
-第二步：当用户点击该专辑后，执行了恶意脚本，后端代码没有禁止第三方站点发出的请求，所以黑客就获取了用户的Cookies，接着就可以访问用户的站点或者调用站点的API
+第二步：当用户打开了当前页面，执行了恶意脚本，后端代码没有禁止第三方站点发出的请求，所以黑客就获取了用户的Cookies，接着就可以访问用户的站点或者调用站点的API
 
 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fb4e440c55ed4841a70a15de04804332~tplv-k3u1fbpfcp-watermark.image?)
-
-我们来模拟下存储型攻击
 
 
 
@@ -97,9 +95,43 @@ XSS攻击常被分为三类：存储型攻击、反射型攻击、基于DOM的XS
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd4e98e4eaaa4843ada9806e68b8c878~tplv-k3u1fbpfcp-watermark.image?)
 如果将其中的攻击脚本插入用户的页面中，然后向第三方服务器发送cookies，这就构成了XSS攻击
 
+## 三、模拟存储型攻击
+
+我们来模拟下存储型攻击
+
+### 1、前期准备
+
+一个恶意的脚本这里用Express搭建，端口9000
+
+![一个恶意服务](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639461591149xss5.png)
 
 
-##  三、防止XSS攻击的办法
+
+### 2、正常站点
+
+另外启动一个http服务器，为我们的正常站点，端口8080。
+
+假设，这个的网站存在漏洞，没有过滤参数，恶意脚本上传到了服务器
+
+![表单录入](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639461005945xss1.png)
+
+### 3、正常站点的另一个页面
+
+当用户打开另一个页面，可以加载了前一步录入的内容，我们发现恶意脚本已经执行
+
+![打开站点](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639461015639xss2.png)
+
+### 4、恶意脚本执行
+
+![恶意脚本执行](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639461027013xss3.png)
+
+### 5、恶意服务后端获取当前站点Cookies
+
+![获取Cookie](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639461035607xss4.png)
+
+
+
+##  四、防止XSS攻击的办法
 
 阻止XSS攻击，要先知道XSS攻击的原理：一般分为两个步骤。
 
