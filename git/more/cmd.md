@@ -29,13 +29,9 @@ git push -u origin --tags
 
 ```
 
+> Git多用户切换
 
-## git多用户切换
-
-不同的项目需要设置不同的用户信息
-
-只需要修改本地项目下`vim .git/config`用户信息即可
-
+不同的项目需要设置不同的用户信息，只需要修改本地项目下`vim .git/config`用户信息即可
 
 ```
 user@FVFFG2HUQ6LR .git % cat config 
