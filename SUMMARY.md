@@ -11,7 +11,7 @@
     * [RESTAPI最佳实践](translation/restful-api-cn.md)
 * [Git](git/README.md)
     * [Git分支管理](git/more/分支管理.md)
-    * [工作常见问题](git/more/工作问题.md)
+    * [工作常见问题](git/more/cmd.md)
     * [命令总览](git/base/overview.md)
 * [GitBook教程](gitbook/README.md)
     * [Gitbook-Cli](gitbook/gitbook-cli.md)
