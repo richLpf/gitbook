@@ -53,13 +53,30 @@ https://ux.admin.com:8080/api
 
 ### 1、Dom安全
 
-通过window.open打开页面
+**通过window.open打开页面相同域名下的页面**
 
-![操作常见的源](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bf630d9518f94e40815e19fb78867f7f~tplv-k3u1fbpfcp-zoom-1.image)
+![操作常见的源](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639494796405open1.png)
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/58c656e7985b46ebb1dae3ee66094468~tplv-k3u1fbpfcp-zoom-1.image)
+**点击window.open按钮，打开相同域名下的页面**
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ef7744ce93584fdd87b04b132334a826~tplv-k3u1fbpfcp-zoom-1.image)
+![点击open打开](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639494804674open2.png)
+
+**此时在子页面中通过window.opener操作父页面中的Dom，发现生效**
+
+![在子页面中操作dom](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639494813242open3.png)
+
+**同样的方式，window.open打开不同域名下的页面，同样通过window.opener操作，返现报跨域错误**
+
+![相同的方式操作不同域名下的页面](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639494825458open4.png)
+
+所以为了安全起见，通过window.open打开页面可以增加代码，阻止子页面操作dom
+
+```js
+const win = window.open("http://localhost:9000/index.html")
+win.opener = null
+```
+
+
 
 ### 2、数据层面。
 
