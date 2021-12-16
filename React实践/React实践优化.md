@@ -42,25 +42,42 @@ const object = {
 	b: 2
 }
 // es6+, 判断对象属性值是否存在
-const c = object.c   =>  const c = object?.c 
+const c = object.c  
+// 优化写法
+const c = object?.c 
+```
 
-// 非必要的三元选择符直接使用 ||
-const size = sise ? size : 1 => const size = size || 1 
+2、非必要的三元选择符直接使用 ||
 
-// 判断数组长度，利用1==true，减少判断
+```js
+const size = sise ? size : 1 
+// 优化写法
+const size = size || 1 
+```
+
+3、判断数组长度，利用1==true，减少判断
+
+```js
 const arr = []
 if(Array.isArray(arr)&&arr.length > 0){
 	return true
 }else{
 	return false
-} => Array.isArray(arr)&&arr.length ? true : false
+} 
+// 优化写法
+Array.isArray(arr)&&arr.length ? true : false
+```
 
-// if else => 替换成三元选择符
+4、if else => 替换成三元选择符
+
+```js
 if(Array.isArray(arr)){
   getList(arr)
 }else{
   getDetail()
-} => Array.isArray(arr) ? getList(arr) : getDetail()
+} 
+// 优化写法
+Array.isArray(arr) ? getList(arr) : getDetail()
 ```
 
 
