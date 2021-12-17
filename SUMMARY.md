@@ -11,7 +11,7 @@
 * [日常整理](unknown/README.md)
     * [前端规范](unknown/standard.md)
     * [RESTAPI最佳实践](translation/restful-api-cn.md)
-    * [Js-String基础](unknown/jsvascript/string.md)
+    * [Js-String基础](unknown/javascript/string.md)
 * [Git](git/README.md)
     * [快速上手](git/快速上手.md)
     * [分支管理](git/分支管理.md)
