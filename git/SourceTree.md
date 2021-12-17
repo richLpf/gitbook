@@ -9,7 +9,7 @@
 
 ### 一、安装
 
-下载地址：SourceTree
+下载地址：[SourceTree](https://www.sourcetreeapp.com/)
 
 具体安装过程省略，可能需要翻墙。
 
