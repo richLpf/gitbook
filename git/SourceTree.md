@@ -5,7 +5,7 @@
 常见的我用过的有**SourceTree**, **smartGit**
 这里我主要推荐SourceTree,首先免费，其次操作简单，内容展示比较全。
 
-![TPL_中台产品部 > Git图像化工具使用 > 1.png](http://ushare.ucloudadmin.com/download/attachments/57587048/1.png?version=1&modificationDate=1603295912907&api=v2)
+![TPL_中台产品部 > Git图像化工具使用 > 1.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639709636022sourcetree1.png)
 
 ### 一、安装
 
@@ -17,7 +17,7 @@
 
 工具栏 -> 选项
 
-![TPL_中台产品部 > Git图像化工具使用 > gitconfig.png](http://ushare.ucloudadmin.com/download/attachments/57587048/gitconfig.png?version=1&modificationDate=1603295968928&api=v2)
+![TPL_中台产品部 > Git图像化工具使用 > gitconfig.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639709641194sourcetree2.png)
 
 - 1、填写用户名称和电子邮件地址，作为后面提交代码的信息展示
 - 2、SSH客户端配置
@@ -37,7 +37,7 @@ linux电脑的key一般存在root/.ssh 目录，其中一个公钥一个私钥�
 
 点击主界面tab切换后面的+号，打开如下面板
 
-![TPL_中台产品部 > Git图像化工具使用 > gitclone.png](http://ushare.ucloudadmin.com/download/attachments/57587048/gitclone.png?version=1&modificationDate=1603296170929&api=v2)
+![TPL_中台产品部 > Git图像化工具使用 > gitclone.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639709643893sourcetree3.png)
 
 - 1、local 可以展示当前我们本地打开的项目有哪些？
 - 2、remote，sourceTree会记录你的远程仓库地址，你可以引入远程仓库内任意的项目
@@ -48,7 +48,7 @@ linux电脑的key一般存在root/.ssh 目录，其中一个公钥一个私钥�
 
 ### 工作示例
 
-![TPL_中台产品部 > Git图像化工具使用 > sourceTree.png](http://ushare.ucloudadmin.com/download/attachments/57587048/sourceTree.png?version=1&modificationDate=1603296145840&api=v2)
+![TPL_中台产品部 > Git图像化工具使用 > sourceTree.png](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639709648769sourcetree4.png)
 
 sourceTree 整个界面分成了一个区域，这里我们重点介绍下这7个区域，也是我们常用的地方
 
