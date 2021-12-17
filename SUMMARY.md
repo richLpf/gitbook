@@ -7,7 +7,7 @@
     * [XSS攻击](browser-security/xss.md)
     * [CSRF攻击](browser-security/CSRF.md)
 * [React](React/README.md)
-    * [React实践优化](React/React实践优化.md)
+    * [React实践优化](react/React实践优化.md)
 * [日常整理](unknown/README.md)
     * [前端规范](unknown/standard.md)
     * [RESTAPI最佳实践](translation/restful-api-cn.md)
