@@ -12,7 +12,6 @@
 
 ## 最新
 
-
 2021年12月16日 [Rest Api最佳设计实践](https://lpfbook.gitbook.io/docs/unknown/restful-api-cn)
 2021年12月1日  [Web安全CSRF攻击远离和实践](https://lpfbook.gitbook.io/docs/browser-security/csrf)
 
@@ -32,10 +31,6 @@
 ## 文章翻译
 
 - [Restful API设计实践](https://lpfbook.gitbook.io/docs/unknown/restful-api-cn)
-
-## Git
-
-- [Git多人开发分支管理](https://lpfbook.gitbook.io/docs/git/more/分支管理)
 
 
 

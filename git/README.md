@@ -1,16 +1,14 @@
-汇总一些关于Git的内容
-
-## 一、Git常见的工作中问题汇总
-
-- [工作中常见问题](more/工作问题.md)
-## 二、Git基础内容
-
-- [版本控制](base/版本控制.md)
-- [概念](base/概念.md)
-## 三、Git命令
+## Git文章汇总
 
 
-## 四、Github相关
+
+> 汇总一些关于Git的内容
 
 
-## 五、GitLab相关
+
+* [快速上手](git/快速上手.md)
+* [分支管理](git/分支管理.md)
+* [工作常见问题](git/常见操作.md)
+* [SourceTree安装和使用](git/SourceTree.md)
+* [Git命令解读](git/Git命令解读.md)
+
