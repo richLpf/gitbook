@@ -98,6 +98,32 @@ const getList = useCallback((id) => {
 }, [id])
 ```
 
+- 使用useCallback处理ESlint检测告警处理
+
+![ESlint告警](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639715719515useEffect1.png)
+
+当依赖的函数中有可变的参数，那么在useEffect使用，就可能导致函数更新但是调用没有更新
+
+```jsx
+const [Data, setData] = useState([])
+const [params, setParams] = useState("")
+
+const getList = useCallback((params) => {
+  let data = {
+  	query: params
+  }
+  Api.GetList(data).then(res => {
+  	setData(Data)
+  })
+}, [])
+
+useEffect(() => {
+	getList()
+}, [getList])
+```
+
+这样就成功解决了告警，也解决了参数更新，函数不更新的问题。
+
 
 
 ## 四、对组件使用prop-types参数校验
@@ -249,27 +275,73 @@ export default forwardRef(ChildComponent)
 
 ## 六、防抖和节流
 
-> 在实现防抖
+> 防抖：当连续输入内容时，不希望每次都执行查询调用，在用户停止输入一段时间后执行一次
 
+利用setTimeout，延迟执行的特性，在连续输入时候，
+
+```js
+export function debounce(cb, wait = 2000) {
+  let timer = null
+  return (...args) => {
+      if (timer) clearTimeout(timer)
+      timer = setTimeout(() => {
+          timer = null
+          cb(args)
+      }, wait)
+  }
+}
 ```
 
+> 使用防抖
+
+```js
+import { debounce } from './debounce'
+const getList = (data) => {
+	console.log("远程查询产品类型列表")
+}
+const debounceList = debounce(getList, 1000) //连续事件停止1秒后执行
+// Input onChange事件
+const onChange = (val) => {
+  debouncList({query: val})
+}
 ```
 
-Lodash的防抖函数
+> 在React中防抖函数处理
 
-```
+我们知道函数式组件，在每次刷新后都会重新初始化，那么就会导致如上所示的调用失效。所以我们可以利用useRef将debounce的函数绑定，这样就可以防止重复更新，导致的实效。
+
+```jsx
+import React, { useState, useRef } from 'react'
+import { Input, Button, Card } from "antd"
+import { debounce } from "../../utils/common"
+
+function Debounce(){
+    const [value, setValue] = useState(undefined)
+    const getQueryList = () => {
+        console.log("获取查询列表")
+    }
+    const debounceRef = useRef(debounce(getQueryList))
+    const onChange = (e) => {
+        setValue(e.target.value)
+        debounceRef.current({a: e.target.value})
+    }
+    const throttle = () => {
+        console.log("节流")
+    }
+    return <Card>
+        <div>
+            <p>防抖：多次触发同一事件，经过一段时间后最少执行一次</p>
+        </div>
+        <div style={{marginBottom: 20}}>
+            输入内容：<Input value={value} onChange={onChange}/>
+        </div>
+        <Button onClick={throttle}>提交（节流）</Button>
+    </Card>
+}
+export default Debounce
 ```
 
-在函数式React中防抖函数处理
-
-```
-
-```
-
-在Class React中的防抖
-
-```
-```
+**Lodash的[防抖](https://www.lodashjs.com/docs/lodash.debounce)和[节流](https://www.lodashjs.com/docs/lodash.throttle)**
 
 
 
@@ -277,10 +349,15 @@ Lodash的防抖函数
 
 ### 1、useEffect使用注意事项
 
-- 第二个参数的使用
+**第二个参数的使用**
 
-- 模拟componentWillUnmount方法
-- 组件告警，提示如下
+
+
+**模拟componentWillUnmount方法**
+
+
+
+**组件告警，提示如下**
 
 ```
 Warning: Can't perform a React state update on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in a useEffect cleanup function.in Notification
@@ -304,9 +381,11 @@ Warning: Can't perform a React state update on an unmounted component. This is a
 
 ## 八、常用组件
 
-### 1、定时器
+### 1、定时器或倒计时
 
-### 2、css在js文件中的使用
+
+
+### 2、封装Antd表格
 
 
 
