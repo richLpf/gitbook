@@ -1,4 +1,4 @@
-# API Architecture — Design Best Practices for REST APIs
+ API Architecture — Design Best Practices for REST APIs
 
 ## REST APIs everywhere!
 
