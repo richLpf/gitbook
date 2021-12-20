@@ -374,7 +374,7 @@ const onChange = (val) => {
 
 > 在React中防抖函数处理
 
-我们知道函数式组件，在每次刷新后都会重新初始化，那么就会导致如上所示的调用失效。所以我们可以利用useRef将debounce的函数绑定，这样就可以防止重复更新，导致的实效。
+我们知道函数式组件，在每次刷新后都会重新初始化，那么就会导致如上所示的调用失效。所以我们可以利用useRef将debounce的函数绑定，这样就可以防止重复更新。
 
 ```jsx
 import React, { useState, useRef } from 'react'
@@ -408,7 +408,7 @@ export default Debounce
 
 效果：![防抖](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639985308246debounce1.png)
 
-可以看到防抖，联系触发，只要事件不停，最后只会执行一次
+可以看到防抖，连续触发，只要事件不停，最后只会执行一次
 
 **应用场景（一般只需要最终触发一次的事件）：Input输入、页面resize**
 
@@ -536,7 +536,7 @@ function Child2({data}){
 export default memo(Child2)
 ```
 
-给组件使用memo，再次更新组件一的数据发现
+给组件2使用memo，再次更新组件一的数据发现
 
 ![打印](https://cdn.jsdelivr.net/gh/richLpf/pictures@main/gitbook/1639988884479react-hooks2.png)
 
