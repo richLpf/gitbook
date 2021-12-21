@@ -1,5 +1,19 @@
 # 我的前端知识库
 
+
+
+题竹石
+
+咬定青山不放松，
+
+立根原在破岩中，
+
+千磨万击还坚劲，
+
+任尔东西南北风。
+
+
+
 欢迎有缘人！
 
 人生跌跌撞撞，想要活的明明白白不容易。
@@ -12,6 +26,7 @@
 
 ## 最新
 
+- 2021年12月20日 [React实践优化](https://lpfbook.gitbook.io/docs/react/react-shi-jian-you-hua)
 - 2021年12月16日 [Rest Api最佳设计实践](https://lpfbook.gitbook.io/docs/unknown/restful-api-cn)
 - 2021年12月1日  [Web安全CSRF攻击远离和实践](https://lpfbook.gitbook.io/docs/browser-security/csrf)
 
