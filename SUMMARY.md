@@ -2,7 +2,8 @@
 
 * [前言](README.md)
 * [技术周刊](weekly/Readme.md)
-* [我的收藏](collection.md)
+    * [第一份周刊](weekly/2022-01-12.md)
+    * [我的收藏](collection.md)
 * [浏览器安全](browser-security/README.md)
     * [同源策略](browser-security/same-origin-policy.md)
     * [XSS攻击](browser-security/xss.md)
