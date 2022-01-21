@@ -1,5 +1,7 @@
 ## Github 仓库配置
 
+关联Github，设置自动部署git action
+
 1、新建仓库
 
 
@@ -9,6 +11,10 @@
 
 
 3、github page
+
+
+
+
 
 ## 部署
 

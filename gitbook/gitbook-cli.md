@@ -1,6 +1,6 @@
-# GitBook 博客搭建
+# GitBook-CLI
 
-### 一、生成项目
+### 一、安装使用
 
 1、gitbook-cli安装
 
@@ -34,16 +34,17 @@ gitbook build ./ ./docs
 gitbook init
 
 gitbook serve
-
 ```
+
+1、项目目录配置
+
+
 
 __目录结构见SUMMARY.md__
 
 
 
-### 二、配置项目
-
-
+### 三、Gitbook文档使用
 
 ## gitbook目录结构
 

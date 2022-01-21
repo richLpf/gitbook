@@ -1,9 +1,8 @@
-# GitBook账号
+# 账号申请
 
 Gitbook 博客或者电子书都可以
 
+作为一个开发，基本都有账号，如果没有可以注册下
 
-
-## 关联gitbook网站，生成网站效果
-
-GitBook 关联
+- [Github](https://github.com/)
+- [Gitbook]()

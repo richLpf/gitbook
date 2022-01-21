@@ -16,6 +16,8 @@
 
 这里介绍就是通过Github和GitBook搭建一套一个免费的博客。
 
+搭建完成后，后面只需要执行`sh deploy.sh`，接口更新博客，设置自动更新
+
 
 
 ## 二、使用到的技术和工具
@@ -63,8 +65,7 @@
 
 ## 四、实际部署
 
-- 1、GitBook账号
-
+- 1、账号申请
 - 2、[GitBook 脚手架使用](https://lpfbook.gitbook.io/docs/gitbook/gitbook-cli)
 - 3、用Github联动GitBook
 - 4、配置Github Actions
