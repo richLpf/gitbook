@@ -2,7 +2,7 @@
 
 一、mysql数据库备份
 
-```
+```shell
 cat /data/db/backup.sh
 #!/bin/sh
 db_arr=(
@@ -37,7 +37,7 @@ mongo数据库的备份是必须要做的，这里记录下自己备份数据的
 mongo备份脚本
 `cat /data/backdb/back_up.sh`
 
-```
+```shell
 ## declare an array variable
 declare -a db_arr=(
 	"testA"

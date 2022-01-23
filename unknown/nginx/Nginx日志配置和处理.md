@@ -10,7 +10,7 @@ Context:| http, server, location, if in location, limit_except
 
 `nginx.conf`,`access_log`具体用法：
 
-```
+```nginx
 http {
 	include           mime.types;
 	default_type      application/octet-stream;

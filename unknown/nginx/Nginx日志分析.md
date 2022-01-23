@@ -40,7 +40,7 @@ nginx日志 `access.log` 放在 `/var/log/nginx` 下, 生成的 `report.html` �
 `goaccess /var/log/nginx/access.log -o /var/log/nginx/report.html --time-format='%H:%M:%S' --date-format='%d/%b/%Y' --log-format=COMBINED`
 运行指令，可以发现/var/log/nginx下生成了report.html文件，我们用nginx部署下静态文件
 
-```
+```nginx
 server {
   listen 8000;
   server_name _;

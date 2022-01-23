@@ -14,14 +14,14 @@ nginx 是一款高并发的轻量级web代理服务器，它可以运行在Linux
 
 （1）CentOS 安装(yum)
 
-```
+```shell
 yum install nginx -y  // 安装nginx
 yum remove nginx   // 卸载nginx
 ```
 
 设置nginx开机自启动
 
-```
+```shell
 systemctl  enable  nginx.service
 systemctl  restart  nginx.service
 ```
@@ -59,7 +59,7 @@ logs  日志文件（错误日志，访问日志）
 
 ### 3、相关命令
 
-```
+```shell
 cd C:\Users\user\Downloads\nginx-1.16.1
 # 查看版本
 nginx.exe -v
@@ -144,7 +144,7 @@ nginx安装指令
 
 当前目录/var/nginx/nginx-1.9.10
 
-```
+```shell
 # 执行命令，配置不同的参数，具体参数见上面安装指令
 ./configure --prefix=/usr/local/nginx  
 
@@ -165,7 +165,7 @@ nginx
 
 (1) 安装报错
 
-```
+```shell
 checking for struct tm.tm_gmtoff ... found
 checking for struct dirent.d_namlen ... not found
 checking for struct dirent.d_type ... found
@@ -258,7 +258,7 @@ web
 
 nginx.conf
 
-```
+```nginx
 server {
    listen  80;
    server_name  localhost;

@@ -52,7 +52,7 @@ user.  Check that you have the necessary permissions and try again.
 
 ### 1、方法一
 
-```
+```shell
 $ docker run -d -e MYSQL_ROOT_PASSWORD=admin -v /home/epccweb/test:/var/lib/mysql --user 1000:50 mysql:5.7
 $ # or whatever user and group id that the container sees on the mounted folder:
 $ docker run -it --rm -v /home/epccweb/test:/var/lib/mysql mysql:5.7 ls -aln /var/lib/mysql
@@ -69,13 +69,13 @@ https://stackoverflow.com/questions/24288616/permission-denied-on-accessing-host
 
 ## 二、使用docker命令行启动数据库
 
-```
+```shell
 docker run -d --restart=always -p 3306:3306  -e MYSQL_USER=root -e TZ=Asia/Shanghai --privileged=true  -e MYSQL_ROOT_PASSWORD='123456' -v /data/mysql/data:/var/lib/mysql -v /data/mysql/my.cnf:/etc/mysql/my.cnf -v /etc/localtime:/etc/locatime mariadb
 ```
 
 其中`mysql/my.cnf`文件内容为：
 
-```
+```shell
 skip-name-resolve
 user=root
 character-set-server=utf8
@@ -108,7 +108,7 @@ update user set password=password("123456") where user="root";
 
 报错信息：
 
-```
+```shell
 ERROR 1348 (HY000): Column 'Password' is not updatable
 // 继续执行报错
 MariaDB [mysql]> ALTER USER 'root'@'localhost' identified by '123456';
