@@ -22,7 +22,9 @@
     "gitbook-plugin-simple-page-toc": "^0.1.2",
     "gitbook-plugin-splitter": "^0.0.8"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "^7.0.4"
+  },
   "scripts": {
     "start": "gitbook serve",
     "build": "gitbook build ./ ./docs",
