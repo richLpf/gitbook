@@ -9,6 +9,7 @@
     * [React实践优化](react/React实践优化.md)
 * [前端工程化整理](project/booklet/README.md)
     * [前端工程化概述](project/booklet/01前端工程化概述.md)
+    * [前端规范自动化](project/booklet/02前端规范自动化.md)
 * [日常整理](unknown/README.md)
     * [我的收藏](collection.md)
     * [前端规范](unknown/standard.md)
